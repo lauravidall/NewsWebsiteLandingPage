@@ -1,8 +1,8 @@
 .header {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 40px;
+    justify-content: center; /* Centraliza horizontalmente os itens no header */
+    align-items: center; /* Centraliza verticalmente os itens */
+    padding: 20px 40px;
     background-color: #fff;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     position: fixed;
@@ -13,10 +13,11 @@
   }
   
   .logo {
-    font-size: 27px;
+    margin-right: auto;
+    font-size: 32px;
     font-weight: bold;
     color: #3BCC4C;
-    font-family: 'Kaisei Decol', serif; /* Aplicando a fonte */
+    font-family: 'Kaisei Decol', serif;
   }
   
   .logo a {
@@ -29,7 +30,7 @@
     display: flex;
     list-style: none;
     padding: 0;
-    margin: 0;
+    margin: 0 auto;
     margin-left: 40px; /* Espaçamento entre a logo e o menu */
   }
   
@@ -40,7 +41,7 @@
   .nav-links li a {
     color: #000000;
     text-decoration: none;
-    font-size: 16px;
+    font-size: 17px;
     font-weight: bold;
     transition: color 0.3s ease;
   }
@@ -50,6 +51,7 @@
   }
   
   .right-buttons {
+    margin-left: auto;
     display: flex;
     align-items: center;
     margin-left: auto; /* Garante alinhamento à direita sem encostar na borda */
