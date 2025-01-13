@@ -4,9 +4,16 @@
 
   .separator {
     width: calc(100% - 600px); /* Largura total menos o padding nas laterais (300px de cada lado) */
-    height: 0.5px; /* Espessura da linha */
+    height: 0.7px; /* Espessura da linha */
     background-color: #3BCC4C; /* Cor verde */
     margin: 40px auto; /* Centraliza a linha e aplica margem */
+  }  
+
+  .news-separator {
+    width: calc(100% - 3px); /* Ajuste para o tamanho específico desejado */
+    height: 0.7px; /* Espessura da linha */
+    background-color: #3BCC4C; /* Cor verde */
+    margin: 26px 26px; /* Espaçamento e centralização */
   }  
 
   /* SEÇÃO 01 */
@@ -60,38 +67,42 @@
   .main-news-content p {
     font-size: 1.1rem;
     line-height: 1.6;
-    color: #333;
+    color: #666;
   }
   
-  /* Estilo para as duas notícias menores */
   .smaller-news-item {
-    display: flex; /* Usando Flexbox para alinhar o título e a imagem lado a lado */
-    justify-content: space-between; /* Espaço entre o título e a imagem */
-    align-items: center; /* Alinha verticalmente o título e a imagem */
+    display: flex; /* Alinhar título e imagem lado a lado */
+    align-items: flex-start; /* Alinha o início do conteúdo com o início da imagem */
     width: 100%;
     padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px; /* Espaçamento entre as notícias menores */
+    margin-bottom: 20px;
   }
   
   .smaller-news-item h2 {
     font-size: 1.5rem;
     font-weight: bold;
-    margin-bottom: 0; /* Remove a margem inferior, já que a imagem não tem p */
-    cursor: pointer; /* Torna o título clicável */
-    font-family: 'Kaisei Decol', serif; /* Aplicando a fonte */
+    margin: 0; /* Remove margem para um alinhamento mais preciso */
+    cursor: pointer;
+    font-family: 'Kaisei Decol', serif;
+    line-height: 1.2; /* Define altura da linha */
   }
   
   .smaller-news-item h2:hover {
-    color: #3BCC4C; /* Muda a cor para verde quando o cursor passa sobre o título */
+    color: #3BCC4C;
+  }
+  
+  .smaller-news-item p {
+    margin: 0; /* Remove margens */
+    margin-top: auto; /* Garante que o parágrafo seja alinhado com o final da imagem */
+    font-size: 0.9rem; /* Ajusta o tamanho da fonte */
+    color: #666; /* Cor de texto padrão */
   }
   
   .smaller-news-image {
-    width: 40%; /* Faz a imagem ocupar uma parte do espaço disponível */
-    height: auto; /* Ajusta a altura proporcionalmente */
-    margin-left: 10px; /* Espaço entre o título e a imagem */
-  }  
+    width: 40%;
+    height: auto; /* Ajusta proporcionalmente a altura */
+    margin-left: 10px;
+  }    
   
   /* Responsividade para telas pequenas */
   @media (max-width: 768px) {
@@ -171,6 +182,56 @@
     margin: 10px;
     font-family: 'Kaisei Decol', serif;
   }
+
+  /* Sec  3 */
+  .two-column-news {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /* Alinha os itens no topo */
+    margin: 40px 0;
+    padding: 0 300px;
+    gap: 20px;
+    box-sizing: border-box;
+  }
+  
+  .news-column {
+    flex: 1; /* Garante que ambas as colunas tenham a mesma largura */
+    padding: 20px;
+  }
+  
+  .news-column img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    margin-bottom: 15px;
+  }
+  
+  .news-column h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #000000;
+    font-family: 'Kaisei Decol', serif; /* Aplicando a fonte */
+    cursor: pointer;
+  }
+
+  .news-column h2:hover {
+    color: #3BCC4C; /* Cor verde no hover */
+  }
+  
+  .news-column p {
+    font-size: 1em;
+    color: #666;
+    margin-bottom: 15px;
+  }
+  
+  .news-column a {
+    text-decoration: none;
+    color: #3BCC4C;
+  }
+  
+  .news-column a:hover {
+    text-decoration: underline;
+  }  
   
   .tech-and-people {
     display: grid;
@@ -216,38 +277,66 @@
     text-decoration: underline;
   }    
   
-  /* Seção de inscrição */
-  .subscribe-section {
+/* Seção de inscrição */
+.subscribe-section {
     text-align: center;
-    margin: 40px 0;
-    padding: 0 300px; /* Aplica o mesmo padding que a seção 1 */
-    box-sizing: border-box;
+    padding: 40px 300px; /* Aplica padding para espaço interno */
+    background-color: #0b7a18; /* Fundo verde escuro */
+    color: white; /* Texto branco para contraste */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Sombra leve para destacar a seção */
+    width: calc(100% - 600px); /* Largura da página menos o padding de 300px de cada lado */
+    box-sizing: border-box; /* Inclui padding no cálculo da largura */
+    margin: 40px auto; /* Centraliza horizontalmente */
   }
   
   /* Formulário de inscrição */
   .subscribe-form {
     margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   
   /* Entrada de e-mail */
   .email-input {
-    padding: 10px;
-    width: 250px;
+    padding: 12px;
+    width: 300px;
     margin-right: 10px;
-    border: 1px solid #ccc;
+    border: 1px solid #3BCC4C; /* Borda verde claro */
     border-radius: 5px;
+    font-size: 1rem;
   }
   
   /* Botão de inscrição */
   .subscribe-button {
-    padding: 10px 20px;
-    background-color: #3BCC4C;
+    padding: 12px 24px;
+    background-color: #3BCC4C; /* Botão verde claro */
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     font-weight: bold;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
   }
+  
+  .subscribe-button:hover {
+    background-color: #32a93c; /* Verde mais escuro no hover */
+    transform: scale(1.05); /* Efeito de crescimento */
+  }
+  
+  /* Estilo do título */
+  .subscribe-section h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    font-family: 'Kaisei Decol', serif; /* Fonte elegante */
+  }
+  
+  /* Estilo do parágrafo */
+  .subscribe-section p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+  }  
   
   /* Rodapé */
   .footer {
