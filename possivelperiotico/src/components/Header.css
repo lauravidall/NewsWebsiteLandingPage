@@ -1,0 +1,101 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 40px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+  }
+  
+  .logo {
+    font-size: 27px;
+    font-weight: bold;
+    color: #3BCC4C;
+    font-family: 'Kaisei Decol', serif; /* Aplicando a fonte */
+  }
+  
+  .logo a {
+    text-decoration: none;
+    color: #3BCC4C;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-links {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-left: 40px; /* Espaçamento entre a logo e o menu */
+  }
+  
+  .nav-links li {
+    margin: 0 15px;
+  }
+  
+  .nav-links li a {
+    color: #000000;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-links li a:hover {
+    color: #3BCC4C;
+  }
+  
+  .right-buttons {
+    display: flex;
+    align-items: center;
+    margin-left: auto; /* Garante alinhamento à direita sem encostar na borda */
+    padding-right: 70px; /* Espaçamento da borda direita */
+  }
+  
+  .right-buttons button {
+    margin-left: 10px;
+    padding: 8px 15px;
+    background-color: #3BCC4C;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+  }
+  
+  .right-buttons button:hover {
+    background-color: #0b7a18;
+  }
+  
+  @media (max-width: 768px) {
+    .header {
+      flex-direction: column;
+      text-align: center;
+      padding: 10px 20px;
+    }
+  
+    .nav-links {
+      flex-direction: column;
+      margin-top: 20px;
+    }
+  
+    .nav-links li {
+      margin: 10px 0;
+    }
+  
+    .right-buttons {
+      margin-top: 20px;
+      justify-content: center;
+    }
+  
+    .right-buttons button {
+      font-size: 14px;
+      padding: 8px 15px;
+    }
+  }
+  
