@@ -165,7 +165,7 @@ function Home() {
 
      {/* Seção 6: Footer */}
       <footer className="footer">
-        <p>&copy; {new Date().getFullYear()} Periótico. All rights reserved.</p>
+        <p>&copy; {new Date().getFullYear()} News. All rights reserved.</p>
       </footer>
       
     </div>
